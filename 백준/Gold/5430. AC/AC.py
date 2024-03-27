@@ -34,17 +34,8 @@ for _ in range(N):
     number = sys.stdin.readline()
     number = number.replace('[', '').replace(']', '').replace('\n', '')
     if n != 0:
-        try:
-            number_list = [int(x) for x in number.split(',')]
-        except:
-            print('error')
-            continue
-
+        number_list = [int(x) for x in number.split(',')]
         for j in number_list:
-            if j != ',' and j != ']' and j != '[' and j != '\n':
-                deque.append(int(j))
+            deque.append(int(j))
 
     action(command)
-
-
-
