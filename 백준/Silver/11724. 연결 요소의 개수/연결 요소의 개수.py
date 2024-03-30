@@ -13,7 +13,7 @@ def BFS(Graph, start, visited):
     visited[start]=True
     while queue:
         V=queue.popleft()
-        print(V,end=' ')
+        #print(V,end=' ')
         for i in Graph[V]:
             if not visited[i]:
                 queue.append(i)
@@ -37,7 +37,7 @@ if __name__ == "__main__":
     for i in range(1,N+1):
         if visited[i]==False:
             result+=1
-            DFS(Graph,i,visited)
+            BFS(Graph,i,visited)
 
     print(result)
     # print('')
