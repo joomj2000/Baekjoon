@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(10**8)
+sys.setrecursionlimit(1000000000)
 
 def DFS(Graph,V,visited):
     #visited[V]=1
@@ -7,10 +7,6 @@ def DFS(Graph,V,visited):
         if visited[i]==0: #부모노드가 정의되어있지 않은경우
             visited[i]=V #탐색을 시작한 노드로 부모노드 정의
             DFS(Graph,i,visited)
-#
-# def BFS(Graph,start,visited):
-#     for i in Graph[V]:
-#         if visited[]
 
 if __name__ == "__main__":
     n = int(sys.stdin.readline()) #n은 노드의 수
