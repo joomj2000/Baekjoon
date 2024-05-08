@@ -17,7 +17,7 @@ def solution(friends, gifts):
         present[friends_dict[gift.split()[1]]]-=1
     
     for p1 in range(len(friends)):
-        for p2 in range(len(friends)):
+        for p2 in range(p1,len(friends)):
             #print(graph[p1][p2])
             if p1==p2:
                 continue
@@ -38,4 +38,4 @@ def solution(friends, gifts):
     
     
     
-    return max(answer)//2
+    return max(answer)
