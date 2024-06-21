@@ -1,9 +1,10 @@
 import sys
-input = sys.stdin.read
 
-# 입력 받기
-data = input().split()
-maps = [list(map(int, list(row))) for row in data]
+sys.setrecursionlimit(1000000)
+
+maps=[]
+for i in range(9):
+    maps.append(list(map(int,sys.stdin.readline().strip())))
 
 # 유효성 검사 배열
 rows = [[False] * 10 for _ in range(9)]
